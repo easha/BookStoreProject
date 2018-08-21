@@ -7,8 +7,8 @@
 	require_once "./functions/database_functions.php";
 	$conn = db_connect();
 
-	$name = trim($_POST['name']);
-	$pass = trim($_POST['pass']);
+	$name = trim($_POST['email']);
+	$pass = trim($_POST['password']);
 
 	if($name == "" || $pass == ""){
 		echo "Name or Pass is empty!";
@@ -20,7 +20,7 @@
 	$pass = sha1($pass);
 
 	// get from db
-	$query = "SELECT name, pass from admin";
+	$query = "SELECT Email, Password from admin";
 	$result = mysqli_query($conn, $query);
 	if(!$result){
 		echo "Empty data " . mysqli_error($conn);
@@ -28,7 +28,7 @@
 	}
 	$row = mysqli_fetch_assoc($result);
 
-	if($name != $row['name'] && $pass != $row['pass']){
+	if($name != $row['Email'] && $pass != $row['Password']){
 		echo "Name or pass is wrong. Check again!";
 		$_SESSION['admin'] = false;
 		exit;
