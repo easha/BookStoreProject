@@ -59,6 +59,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			{ 	echo "Book name: " . $row["Title"]. "<br>";
 		 		echo "About: " . $row["About"]. "<br>";//showing info of the book
 				echo "Price: " . $row["Price"]. "<br>";
+ 
+		
+				echo "Author:  " . $row["Author_name"]. "<br>";
 			}
 
 
@@ -903,10 +906,16 @@ while($row = mysqli_fetch_assoc($query5)) //display all rows from query
 $query7= mysqli_query($link,"Select * from Review where  Review.Type = '$rec1'  Order by Rating DESC limit 2");
 while($row1= mysqli_fetch_assoc($query7)) //display all rows from query
 		
-	{	
+	{	$query9= mysqli_query($link,"Select * from Books ");
+		while($row3= mysqli_fetch_assoc($query9))
+			{ if($row1['Book_id']==$row3['Book_id'])
+				 echo "Book name:  " . $row3["Title"]. "<br>";
+		echo "Book Price:  " . $row3["Price"]. "<br>";
+		echo "Author:  " . $row3["Author_name"]. "<br>";
+
+				}
 			
-echo "Book name: " . $row1["Title"]. "<br>";
-				
+
 				
 				
 				
@@ -919,9 +928,15 @@ while($row2= mysqli_fetch_assoc($query8)) //display all rows from query
 		
 	{	
 			
-echo "Book name: " . $row2["Title"]. "<br>";
-				
-				
+$query10= mysqli_query($link,"Select * from Books ");
+		while($row4= mysqli_fetch_assoc($query9))
+			{ if($row2['Book_id']==$row4['Book_id'])
+				 echo "Book name:  " . $row4["Title"]. "<br>";
+		echo "Book Price:  " . $row4["Price"]. "<br>";
+		echo "Author:  " . $row4["Author_name"]. "<br>";
+
+				}
+ 
 				
 				
 
