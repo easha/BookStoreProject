@@ -20,10 +20,12 @@ $link = mysqli_connect("localhost", "root", "") or die($link);
 //new books recommendation
 
 $query4 = mysqli_query($link,"Select * from Books  ORDER BY Book_id DESC
-LIMIT 5")  or die( mysqli_error($link)); //recent book suggestion
+LIMIT 3")  or die( mysqli_error($link)); //recent book suggestion
 	while($row = mysqli_fetch_array($query4))
 	{
- 		 echo "Book name:  " . $row["Title"]. "<br>";
+ 		  echo "Book name:  " . $row["Title"]. "<br>";
+		echo "Book Price:  " . $row["Price"]. "<br>";
+		echo "Author:  " . $row["Author_name"]. "<br>";
 		
 		
 	}
@@ -42,7 +44,7 @@ while($row = mysqli_fetch_assoc($query)) //display all rows from query
 
 			if($table_cus == $user )
 			{
-//$bool=false;
+
  $customer_id = $row['Customer_id'];}
 
 
@@ -80,7 +82,17 @@ if($bool)
 	<a href="Profile.php">profile</a><br/><br/>
 	<a href="Category.php">Category</a><br/><br/>
 	<a href="Payment.php">Click here to pay</a><br/><br/>
-        
+        <form action="Home.php" method="post">
+			Book name: <input type="text" name="book_name" /> <br/>
+			Author<input type="text" name="author" /> <br/>
+
+
+			
+			
+
+
+			<input type="submit" value="Search"/>
+		</form>
  
    
 
@@ -88,4 +100,48 @@ if($bool)
 
  
 <body>
+
+
+
+ <?php
+
+
+$link = mysqli_connect("localhost", "root", "") or die($link);
+ 
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+
+$book_name =  mysqli_real_escape_string($link,$_POST['book_name']);
+$author =  mysqli_real_escape_string($link,$_POST['author']);
+   $user = $_SESSION['user']; //assigns user value
+
+   	 $bool = true;
+	mysqli_select_db($link,"bookworm") or die("Cannot connect to database"); 
+
+//search
+ 
+			
+
+$query4 = mysqli_query($link,"Select * from Books  where Books.Title = '$book_name' OR  Books.Author_name = '$author'")  or die( mysqli_error($link)); 
+	while($row = mysqli_fetch_array($query4))
+	{	
+		
+
+	
+ 		 echo "Book name:  " . $row["Title"]. "<br>";
+		echo "Book Price:  " . $row["Price"]. "<br>";
+		echo "Author:  " . $row["Author_name"]. "<br>";
+		
+		
+		
+
+		
+		
+	}
+
+}
+
+
+
+   ?>
 </html>
