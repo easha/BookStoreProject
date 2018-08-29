@@ -1,0 +1,249 @@
+*{margin:0;padding:0}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: #ffe6e6;
+}
+
+.bookInfo
+{
+  position: relative;
+  margin-top: 75px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: inline-block;
+}
+.bookImage
+{
+  position: relative;
+  float: left;
+}
+.bookDes
+{
+  position: relative;
+  margin-left: 100px;
+  float: right;
+}
+.buton1
+{
+  position: absolute;
+  margin-left: 75%;
+  
+}
+.pubs
+{
+  position: relative;
+  text-align: center;
+  margin: 20px;
+}
+
+
+h1,h2,h3,h4,h5,h6{font-family: 'Fjalla One', sans-serif;}
+  .carousel .carousel-item {
+  height: 750px;
+  width: 100%;
+}
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 600px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.card-deck{
+  padding-top: 2%;
+}
+.card-body{
+  height: 110px;
+}
+.card{
+  border: none;
+  border-radius: 0;
+  padding: 5px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.btn-card{
+  padding: 0 ;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  font-size: 26px;
+  background-color: #ddd;
+  color: #fff;
+  border: 5px solid #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -30px;
+  transition: background-color 1s;
+}
+.btn-card:hover{
+  background-color: #66ff1a;
+  border-color: #732626;
+}
+.card-image{
+  align: center;
+  width: 269px;
+  height: 406px;
+}
+.center {
+    margin: auto;
+    width: 80%;
+    border: 3px solid green;
+    padding: 2px;
+}
+
+
+/*visitors counter*/
+.counterWrapper{
+  background-color: #a3a3c2;
+}
+.main_counter_area{
+  margin-top: 2%;
+  background-size: cover;
+  overflow: hidden;
+  }
+.main_counter_area .main_counter_content .single_counter{
+  background: rgba(236, 72, 72, 0.5);
+  color: #fff;
+  padding: 25%;
+  width: 100%;
+  height: 200px;
+
+  }
+.main_counter_area .main_counter_content .single_counter i{
+  font-size:36px;
+ }
+ .visitorItem{
+   float :left;
+   padding : 5% ;
+
+
+ }
+ /*google map api*/
+ .googleApiWrapper h2{
+   text-align: center;
+   background-color: #f2f2f2;
+   color:#404040;
+   border: 1px solid #737373
+ }
+ .googleApiWrapper h2:hover{
+   background-color: #404040;
+   color:#f2f2f2;
+   border: 1px solid #737373
+ }
+ .googleApiWrapper{
+
+ }
+#map{
+  margin-top: -7px;
+  height: 400px;
+  width: 100%;
+  border: 1px solid #737373;
+}
+
+/*footer part*/
+
+.ourServicesWrapper{
+  
+}
+.ourServicesWrapper h2{
+  text-align: center;
+  background-color: #f2f2f2;
+  color:#404040;
+  border: 1px solid #737373;
+}
+.ourServicesWrapper h2:hover{
+  background-color: #404040;
+  color:#f2f2f2;
+  border: 1px solid #737373
+}
+
+.footer_top_bg{
+	overflow:hidden;
+	background:url(images/footer_top_bg.png) repeat-x;
+	background-size:cover;
+	padding: 25px 0;
+  margin-top: -7px;
+  height: 400px;
+}
+
+.single_footer_area{
+	float:left;
+	width:310px;
+}
+
+.single_footer_area h3{
+	font-size:25px;
+	font-weight:bold;
+	color:#E6E3E3;
+}
+
+.frst_h2_1{
+	background:url(images/footer_h2_bg.png) no-repeat;
+	background-position:left center;
+	padding-left:40px;
+}
+.frst_h2_2{
+	background:url(images/footer_h2_bg1.png) no-repeat;
+	background-position:left center;
+	padding-left:40px;
+}
+.frst_h2_3{
+	background:url(images/footer_h2_bg2.png) no-repeat;
+	background-position:left center;
+	padding-left:40px;
+}
+
+.single_footer_area ul{
+	list-style:none;
+}
+.single_footer_area ul li{
+	background:url(images/footer_tick_mark.png) no-repeat;
+	background-position:left center;
+	padding:7px 0;
+	padding-left: 30px;
+
+}
+
+.single_footer_area ul li a{
+	color:#aaaaaa;
+}
+
+
+.twitter_section{
+	background:url(images/twitter_background.png) no-repeat;
+	background-position:center center;
+	background-size:100% 100%;
+}
+
+
+.twitter_section p{
+	color:#aaaaaa;
+	font-size:14px;
+	padding:15px;
+	padding-bottom:25px;
+}
+
+.twitter_section a{
+	color:#6e9220;
+}
+.tw_im_btm{
+    float: right;
+    margin-top: -25px;
+    margin-right: 10px;
+}
+
+
+.area_middle_2{
+	padding-left: 45px;
+    margin-right: -25px;
+}
